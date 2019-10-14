@@ -15,6 +15,8 @@ void Carnivore::move(){
       curr.x = x + carnRadius*cos(i);
       curr.y = y + carnRadius*sen(i);
       curr = getRightLocation(curr);
+      vector<float> food;
+
       //need to see how i'm gonna save all the entitys around
       carnRadius--;
     }

@@ -1,34 +1,29 @@
 #ifndef ENTITY_H
 #define ENTITY_H
+#include "parameters.h"
+#include "utils.h"
+#include <vector>
+using namespace std;
 
 Class Entity{
-  public:
-    Entity();
-    void inicialize_entity();
-    float get_distance();
-    std::pair <int, int> which_position();
-    virtual void move();
-  private:
-    std::pair <int, int> position; //where it is
-    double speed; //for future purposes;
-    double property; //growht rate and energy
-}
+public:
+  Entity();
+  ~Entity();
 
-Class Carnivore:public Entity{
-  public:
-    void move();
-}
+  virtual void move();
 
-Class Herbivore:public Entity{
+  //getters
+  float getX();
+  float getY();
 
-}
+  //setters
+  void setX(float x_);
+  void setY(float y_);
 
-Class Plant:public Entity{
-
-}
-
-CLass Nothing:public Entity{
-
+private:
+  Position pos; //where it is
+  double speed; //for future purposes;
+  double property; //growht rate and energy
 }
 
 #endif

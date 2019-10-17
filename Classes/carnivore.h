@@ -2,7 +2,7 @@
 #define CARNIVORE_H
 #include "utils.h"
 
-Class Carnivore: public Entity{
+class Carnivore: public Entity{
 public:
   Carnivore();
   ~Carnivore();

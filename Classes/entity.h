@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-Class Entity{
+class Entity{
 public:
   Entity();
   ~Entity();

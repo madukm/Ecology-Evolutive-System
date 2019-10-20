@@ -1,13 +1,20 @@
 #ifndef ENTITY_H
 #define ENTITY_H
+
 #include "parameters.h"
-#include "utils.h"
 #include <vector>
 using namespace std;
 
-Class Entity{
+// Change this later (ask Breno why)
+typedef struct position_ Position;
+struct position_{
+  float x;
+  float y;
+};
+
+class Entity{
 public:
-  Entity();
+  Entity(int x_, int y_, double property_);
   ~Entity();
 
   virtual void move();
@@ -20,10 +27,10 @@ public:
   void setX(float x_);
   void setY(float y_);
 
-private:
+protected:
   Position pos; //where it is
   double speed; //for future purposes;
   double property; //growht rate and energy
-}
+};
 
 #endif

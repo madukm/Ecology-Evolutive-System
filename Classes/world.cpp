@@ -1,4 +1,4 @@
-#include "entity.h"
+#include "world.h"
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
@@ -7,8 +7,8 @@
 #include <utility>
 #include <vector>
 
-void Class World::World(int n, int m){
+World::World(int n, int m){
   map.resize(m);
-  for(auto row : m)
+  for(auto row : map)
    row.resize(n);
 }

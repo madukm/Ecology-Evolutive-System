@@ -2,27 +2,13 @@
 #include <stdlib.h>
 #include "entity.h"
 
-Entity::Entity(int x_, int y_, double property_){
-  pos.x = x_;
-  pos.y = y_;
+Entity(int x_, int y_, float angle_, double property_){
+  pos->setX(x_);
+  pos->setY(y_);
+  pos->setAngle(angle_);
   property = property_;
 }
 
 Entity::~Entity(){}
-
-float Entity::getX(){
-  return pos.x;
-}
-float Entity::getY(){
-  return pos.y;
-}
-
-void Entity::setX(float x_){
-  pos.x = x_;
-}
-
-void Entity::setY(float y_){
-  pos.y = y_;
-}
 
 void Entity::move(void){}

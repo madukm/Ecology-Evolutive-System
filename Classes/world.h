@@ -9,7 +9,7 @@ class World{
     void random_world(void);
 
   private:
-    vector<vector<Entity*> > map;
+    vector<vector <Entity*> > map;
 };
 
 

@@ -12,3 +12,7 @@ World::World(int n, int m){
   for(auto row : map)
    row.resize(n);
 }
+
+void World::random_world(){
+  
+}

@@ -2,20 +2,20 @@
 #include <stdlib.h>
 #include <math.h>
 #include "carnivore.h"
-#include "utils.h"
 
-Carnivore::Carnivore(){
-
+Carnivore::Carnivore(float x, float y, float angle){
+  pos(getX(x), getY(y), getAngle(angle))
 }
 
 void Carnivore::move(){
+  vector<Position*> food;
+  vector<Position*> free;
   for(int i = 0; i<360; i+=15){
-    while(carnRadius > 0){
+    while(radiusCarnivores > 0){
       Position curr;
-      curr.x = x + carnRadius*cos(i);
-      curr.y = y + carnRadius*sen(i);
-      curr = getRightLocation(curr);
-      vector<float> food;
+      curr->setX(x + radiusCarnivores*cos(i));
+      curr->setY(y + radiusCarnivores*sen(i));
+
 
       //need to see how i'm gonna save all the entitys around
       carnRadius--;

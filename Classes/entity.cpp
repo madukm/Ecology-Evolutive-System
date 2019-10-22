@@ -4,22 +4,24 @@
 
 Entity::Entity(int x_, int y_, double property_){
   pos.x = x_;
-  pos.h = y_;
+  pos.y = y_;
   property = property_;
 }
 
-float getX(){
+Entity::~Entity(){}
+
+float Entity::getX(){
   return pos.x;
 }
-float getY(){
+float Entity::getY(){
   return pos.y;
 }
 
-void setX(float x_){
+void Entity::setX(float x_){
   pos.x = x_;
 }
 
-void setY(float y_){
+void Entity::setY(float y_){
   pos.y = y_;
 }
 

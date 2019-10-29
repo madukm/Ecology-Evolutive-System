@@ -16,3 +16,9 @@ World::World(int n, int m){
 void World::random_world(){
   
 }
+
+Entity *World::get_entity(Position *curr){
+  return map[getX(curr)][getY[curr]];
+}
+
+

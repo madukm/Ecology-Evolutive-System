@@ -4,7 +4,9 @@
 #include "position.h"
 #include "parameters.h"
 #include "entity.h"
-#include <vector>
+#include "reference.h"
+#include "world.h"
+
 using namespace std;
 
 class Carnivore : public Entity

@@ -1,24 +1,22 @@
 #include "world.h"
-#include <iostream>
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
-#include <new>
-#include <utility>
-#include <vector>
 
-World::World(int n, int m){
-  map.resize(m);
-  for(auto row : map)
-   row.resize(n);
+using namespace std;
+
+World::World(int n){
+  population.resize(n);
+  size = n;
 }
 
 void World::random_world(){
-  
+  int i, j;
+  for(i = 0; i < size; i++){
+    population[i] = new Entity(randomize_0_10(), randomize_0_10());
+    for(j=0; j<i; j++){
+
+    }
+  }
 }
 
-Entity *World::get_entity(Position *curr){
-  return map[getX(curr)][getY[curr]];
+int World::get_size() const{
+  return size;
 }
-
-

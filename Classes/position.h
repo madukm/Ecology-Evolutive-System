@@ -1,9 +1,12 @@
 #ifndef POSITION_H
 #define POSITION_H
 
+#include "reference.h"
+
 class Position{
 public:
-    Position(float _x, float _y, float _angle);
+    Position(float _x, float _y);
+    ~Position();
     float distanceTo(Position other);
     float angleTo(Position other);
     //----- Getters and Setters -----//
@@ -11,14 +14,11 @@ public:
     void setX(float value);
     float getY() const;
     void setY(float value);
-    float getAngle() const;
-    void setAngle(float value);
-    void setNewPosition(float _x, float _y, float _angle);
+    void setNewPosition(float _x, float _y);
 
 private:
     float x;
     float y;
-    float angle;
 };
 
-#endif
+#endif // POSITION_H

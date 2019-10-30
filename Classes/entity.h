@@ -2,21 +2,21 @@
 #define ENTITY_H
 
 #include "position.h"
-#include "parameters.h"
-#include <vector>
-using namespace std;
+#include "reference.h"
+#include "world.h"
 
 class Entity{
 public:
-  Entity(int x_, int y_, int _angle, double property_);
+  Entity(float x_, float y_);
   ~Entity();
 
   virtual void move();
 
 protected:
-  Position pos; //where it is
-  double speed; //for future purposes;
-  double property; //growht rate and energy
+  Position *pos; //where it is
+  char type; //'C' for carnivore, 'H' for herbivore, 'P' for plant
+  float speed; //for future purposes;
+  float property; //growht rate and energy
 };
 
-#endif
+#endif // ENTITY_H

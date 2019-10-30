@@ -5,13 +5,10 @@ all: build
 run: build
 	./run
 
-build: entity.o utils.o world.o plant.o herbivore.o carnivore.o main.o
+build: entity.o world.o plant.o herbivore.o carnivore.o main.o
 
-main.o: main.cpp Classes/parameters.h
-	@g++ main.cpp -Wall -o run  $(flags) entity.o utils.o world.o plant.o herbivore.o carnivore.o
-
-utils.o: Classes/utils.cpp
-	@g++ Classes/utils.cpp -c $(flags)
+main.o: main.cpp Classes/reference.h
+	@g++ main.cpp -Wall -o run  $(flags) entity.o world.o plant.o herbivore.o carnivore.o
 
 world.o: Classes/world.cpp
 	@g++ Classes/world.cpp -c $(flags)
@@ -22,7 +19,7 @@ plant.o: Classes/plant.cpp
 herbivore.o: Classes/herbivore.cpp
 	@g++ Classes/herbivore.cpp -c $(flags)
 
-entity.o: Classes/entity.cpp Classes/parameters.h
+entity.o: Classes/entity.cpp Classes/reference.h
 	@g++ Classes/entity.cpp -c $(flags)
 
 carnivore.o: Classes/carnivore.cpp

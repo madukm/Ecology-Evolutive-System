@@ -1,16 +1,12 @@
 #ifndef HERBIVORE_H
 #define HERBIVORE_H
-#include "utils.h"
-#include "position.h"
-#include "parameters.h"
+
 #include "entity.h"
-#include <vector>
-using namespace std;
 
 class Herbivore : public Entity
 {
 public:
-  Herbivore(float x, float y, int algle);
+  Herbivore(float x, float y);
   ~Herbivore();
 
   void move();
@@ -18,3 +14,5 @@ public:
 private:
   Position *pos;
 };
+
+#endif // HERBIVORE_H

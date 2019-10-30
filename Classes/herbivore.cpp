@@ -1,22 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 #include "herbivore.h"
 
-Herbivore::Herbivore(float x, float y, float angle){
-  pos(getX(x), getY(y), getAngle(angle))
+using namespace std;
+
+Herbivore::Herbivore(float x, float y):
+  Entity(x, y)
+{
+  type = 'H';
 }
 
 void Herbivore::move(){
-  food = new vector<Position *>;
-  predator = new vector<Position *>;
-  free = new vector<Position *>;
-  for(int i = 0; i<360; i+=15){
-    while(radiusHerbivores > 0){
-      Position curr;
-      curr->setX(x + radiusHerbivores*cos(i));
-      curr->setY(y + radiusHerbivores*sen(i));
+  vector<Position*> *food = new vector<Position *>;
+  vector<Position*> *predator = new vector<Position *>;
+  int i = World->get_size();
+  while(i--){
+    if(pos->distanceTo(World->population[i]) <= radiusHerbivores){
 
+    }
+  }
 
       //need to see how i'm gonna save all the entitys around
       carnRadius--;

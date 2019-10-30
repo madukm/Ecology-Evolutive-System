@@ -1,19 +1,20 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include "position.h"
 #include "reference.h"
 #include "entity.h"
 
 class World{
   public:
-    World(int m, int n);
+    World(int n);
     void random_world(void);
-    Entity *get_entity(Position *curr);
 
+    //----Getters and Setter----//
+    int get_size() const;
+    std::vector<Entity *> population;
   private:
-    vector<vector <Entity*> > map;
+    int size;
 };
 
 
-#endif
+#endif // WORLD_H

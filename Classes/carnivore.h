@@ -1,11 +1,7 @@
 #ifndef CARNIVORE_H
 #define CARNIVORE_H
-#include "utils.h"
-#include "position.h"
-#include "parameters.h"
+
 #include "entity.h"
-#include "reference.h"
-#include "world.h"
 
 using namespace std;
 
@@ -20,3 +16,5 @@ public:
 private:
   Position *pos;
 };
+
+#endif // CARNIVORE_H

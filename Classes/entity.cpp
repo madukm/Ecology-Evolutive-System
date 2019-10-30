@@ -9,3 +9,7 @@ Entity::Entity(float x_, float y_){
 Entity::~Entity(){}
 
 void Entity::move(void){}
+
+char Entity::get_type(){
+  return type;
+}

@@ -12,6 +12,9 @@ public:
 
   virtual void move();
 
+  //----- Getter and Setter -----//
+  char get_type();
+
 protected:
   Position *pos; //where it is
   char type; //'C' for carnivore, 'H' for herbivore, 'P' for plant

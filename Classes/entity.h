@@ -3,7 +3,6 @@
 
 #include "position.h"
 #include "reference.h"
-#include "world.h"
 
 class Entity{
 public:
@@ -14,6 +13,9 @@ public:
 
   //----- Getter and Setter -----//
   char get_type();
+  void set_type(char c);
+  Position *get_position();
+  void set_position(float x, float y);
 
 protected:
   Position *pos; //where it is

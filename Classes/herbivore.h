@@ -2,6 +2,7 @@
 #define HERBIVORE_H
 
 #include "entity.h"
+#include "world.h"
 
 class Herbivore : public Entity
 {
@@ -9,7 +10,7 @@ public:
   Herbivore(float x, float y);
   ~Herbivore();
 
-  void move();
+  void move(World *world);
 
 private:
   Position *pos;

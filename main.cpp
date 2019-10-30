@@ -1,11 +1,14 @@
-#include "world.h"
-#include <stdio.h>
+#include "Classes/world.h"
+#include "Classes/reference.h"
 
 int main(){
-  world = new World(10, 10);
+  World *world = new World(10);
   world->random_world();
-  
+  printf("hello world");
 
   delete world;
   return 0;
 }
+
+/*oie
+*/

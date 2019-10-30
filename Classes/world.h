@@ -10,10 +10,13 @@ class World{
     void random_world(void);
 
     //----Getters and Setter----//
-    int get_size() const;
-    std::vector<Entity *> population;
+    float get_size() const;
+    std::vector<Entity *> get_population();
+
+
   private:
-    int size;
+    float size;
+    std::vector<Entity *> population;
 };
 
 

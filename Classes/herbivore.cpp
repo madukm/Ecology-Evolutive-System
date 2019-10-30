@@ -8,27 +8,25 @@ Herbivore::Herbivore(float x, float y):
   type = 'H';
 }
 
-void Herbivore::move(){
-  vector<Position*> *food = new vector<Position *>;
-  vector<Position*> *predator = new vector<Position *>;
-  int i = World->get_size();
+void Herbivore::move(World *world){
+  vector<Position*> food;
+  vector<Position*> predator;
+  predator.resize(world->get_size());
+  food.resize(world->get_size());
+  float i = world->get_size();
   while(i--){
     int f = 0, p = 0;
-    if(pos->distanceTo(World->population[i]) <= radiusHerbivores){
-        if(World->get_type() == 'C'){
-          food[f] = //essa posicao;
-        }
-        if(World->get_type() == 'H'){
-
-        }
-        if(World->get_type() == 'P'){
-
-        }
+    if(pos->distanceTo(world->get_population()[i]->get_position()) <= radiusHerbivores){
+      if(world->get_population()[i]->get_type() == 'C'){
+        predator[p++] = (world->get_population()[i])->get_position();
+      }
+      else if(world->get_population()[i]->get_type() == 'P'){
+        food[f++] = (world->get_population()[i])->get_position();
+      }
+      else{
+        //is another herbivore, so do not put in any vector
+      }
     }
   }
-
-      //need to see how i'm gonna save all the entitys around
-      carnRadius--;
-    }
-  }
+  //now we have to think on how the herbivore will move
 }

@@ -7,7 +7,7 @@ run: build
 
 build: entity.o world.o plant.o herbivore.o carnivore.o main.o
 
-main.o: main.cpp Classes/reference.h
+main.o: main.cpp
 	@g++ main.cpp -Wall -o run  $(flags) entity.o world.o plant.o herbivore.o carnivore.o
 
 world.o: Classes/world.cpp
@@ -24,6 +24,9 @@ entity.o: Classes/entity.cpp Classes/reference.h
 
 carnivore.o: Classes/carnivore.cpp
 	@g++ Classes/carnivore.cpp -c $(flags)
+
+reference.o: Classes/reference.cpp
+	@g++ Classes/reference.cpp -c $(flags)
 
 clean:
 	@rm run *.o

@@ -7,8 +7,8 @@ class Position{
 public:
     Position(float _x, float _y);
     ~Position();
-    float distanceTo(Position other);
-    float angleTo(Position other);
+    float distanceTo(Position *other);
+    float angleTo(Position *other);
     //----- Getters and Setters -----//
     float getX() const;
     void setX(float value);
